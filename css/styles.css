@@ -15,7 +15,8 @@
 }
 
 nav {
-  height: 5vh;
+  height: 10vh;
+  max-height: 50px;
   background: var(--color1);
 }
 
@@ -34,7 +35,7 @@ nav {
 .nav-links li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
 }
 
@@ -120,7 +121,16 @@ main#home {
   overflow: hidden;
 }
 main#home h1 {
-  margin-top: 20vh;
+}
+
+#name {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0px;
 }
 
 .about-info {
@@ -251,6 +261,7 @@ footer {
   }
   .nav-links.open {
     background: var(--color4);
+    pointer-events: all;
   }
   .nav-links li {
     opacity: 0;
@@ -258,6 +269,12 @@ footer {
   .nav-links li a {
     font-size: 30px;
   }
+
+  .nav-links.open li a {
+    font-size: 45px;
+    z-index: 100;
+  }
+
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
   }
