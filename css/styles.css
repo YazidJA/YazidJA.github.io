@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
+:root {
+  --color1: #0b0b12;
+  --color2: #fbbc01;
+  --color3: #d6475f50;
+  --color4: #d6475f;
+  --color5: #333;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +16,7 @@
 
 nav {
   height: 5vh;
-  background: #0b0b12;
+  background: var(--color1);
 }
 
 .nav-links {
@@ -31,7 +39,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #fbbc01;
+  color: var(--color2);
 }
 
 body {
@@ -68,16 +76,16 @@ h2.small,
 h3.small {
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  background: #d6475f50;
+  background: var(--color3);
 }
 
 a {
-  color: #fafcfb;
+  color: white;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fbbc01;
+  color: var(--color2);
 }
 
 header {
@@ -87,11 +95,11 @@ header {
 }
 
 .text-secondary {
-  color: #fbbc01;
+  color: var(--color2);
 }
 
 .text-tertiary {
-  color: #0b0b12;
+  color: var(--color1);
 }
 
 main {
@@ -105,7 +113,7 @@ main .icons a {
   padding: 0.4rem;
 }
 main .icons a:hover {
-  color: #fbbc01;
+  color: var(--color2);
   transition: all 0.5s ease-out;
 }
 main#home {
@@ -133,11 +141,11 @@ main#home h1 {
 }
 .projects img {
   width: 100%;
-  border: 3px #fafcfb solid;
+  border: 3px white solid;
 }
 .projects img:hover {
   opacity: 0.5;
-  border-color: #fbbc01;
+  border-color: var(--color2);
   transition: all 0.5s ease-out;
 }
 .projects i {
@@ -155,18 +163,18 @@ main#home h1 {
 .btn:hover,
 .btn-dark:hover,
 .btn-light:hover {
-  background: #fbbc01;
-  color: #0b0b12;
+  background: var(--color2);
+  color: var(--color1);
 }
 
 .btn-dark {
   background: black;
-  color: #fafcfb;
+  color: white;
 }
 
 .btn-light {
-  background: #f8fbfd;
-  color: #333;
+  background: white;
+  color: var(--color5);
 }
 
 .contact-box {
@@ -180,7 +188,7 @@ main#home h1 {
 
 footer {
   text-align: center;
-  color: #d6475f50;
+  color: var(--color3);
   padding: 5px;
 }
 
@@ -230,7 +238,7 @@ footer {
   .hamburger-line {
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: white;
     margin: 5px;
   }
   .nav-links {
@@ -242,14 +250,13 @@ footer {
     pointer-events: none;
   }
   .nav-links.open {
-    background: #3893be;
-    pointer-events: all;
+    background: var(--color4);
   }
   .nav-links li {
     opacity: 0;
   }
   .nav-links li a {
-    font-size: 25px;
+    font-size: 30px;
   }
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
