@@ -20,6 +20,15 @@ nav {
   background: var(--color1);
 }
 
+.logo {
+  position: absolute;
+  cursor: pointer;
+  left: 20px;
+  height: 10vh;
+  max-height: 50px;
+  z-index: 1;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -248,9 +257,10 @@ footer {
   .hamburger-line {
     width: 30px;
     height: 3px;
-    background: white;
+    background: var(--color2);
     margin: 5px;
   }
+
   .nav-links {
     position: fixed;
     height: 100vh;
@@ -272,7 +282,6 @@ footer {
 
   .nav-links.open li a {
     font-size: 45px;
-    z-index: 100;
   }
 
   .nav-links li:nth-child(1) {
