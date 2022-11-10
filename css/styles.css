@@ -1,0 +1,291 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 5vh;
+  background: #0b0b12;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.nav-links a:hover {
+  color: #fbbc01;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Source Sans Pro";
+  color: white;
+  line-height: 1.5;
+  background: url(../img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left bottom;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1.big,
+h2.big,
+h3.big {
+  font-size: 6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+h1.small,
+h2.small,
+h3.small {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: #d6475f50;
+}
+
+a {
+  color: #fafcfb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fbbc01;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: #fbbc01;
+}
+
+.text-tertiary {
+  color: #0b0b12;
+}
+
+main {
+  flex: 1;
+  padding: 4rem;
+}
+main .icons {
+  margin-top: 1rem;
+}
+main .icons a {
+  padding: 0.4rem;
+}
+main .icons a:hover {
+  color: #fbbc01;
+  transition: all 0.5s ease-out;
+}
+main#home {
+  overflow: hidden;
+}
+main#home h1 {
+  margin-top: 20vh;
+}
+
+.about-info {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.about-info p {
+  width: 90%;
+  max-width: 900px;
+  padding-top: 1em;
+}
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects img {
+  width: 100%;
+  border: 3px #fafcfb solid;
+}
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #fbbc01;
+  transition: all 0.5s ease-out;
+}
+.projects i {
+  padding-right: 0.4rem;
+}
+
+.btn,
+.btn-dark,
+.btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover,
+.btn-dark:hover,
+.btn-light:hover {
+  background: #fbbc01;
+  color: #0b0b12;
+}
+
+.btn-dark {
+  background: black;
+  color: #fafcfb;
+}
+
+.btn-light {
+  background: #f8fbfd;
+  color: #333;
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.contact-box .iframe-style:hover {
+  border: 0px solid;
+}
+
+footer {
+  text-align: center;
+  color: #d6475f50;
+  padding: 5px;
+}
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .about-info img {
+    float: left;
+    padding-right: 1em;
+    shape-outside: circle();
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-info img {
+    float: left;
+    padding-right: 4.6em;
+    shape-outside: circle();
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .big {
+    line-height: 1;
+    margin-top: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  nav {
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+  }
+  .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    background: #3893be;
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  .about-info p {
+    width: auto;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 2rem;
+  }
+  main #home h1 {
+    margin-top: 10vh;
+  }
+  main .big {
+    margin-top: 3.3rem;
+    font-size: 4rem;
+  }
+  .about-info img {
+    width: 200px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
